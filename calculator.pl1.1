@@ -1,0 +1,26 @@
+sum(A,B):- write('sum of '), write(A), write(' and '),write(B), write(' is '), S is A+B, write(S).
+sub(A,B):- write('Difference of '), write(A), write(' and '),write(B), write(' is '), S is A-B, write(S).
+mul(A,B):- write('Product of '), write(A), write(' and '),write(B), write(' is '), S is A*B, write(S).
+div(A,B):- write('Division of '), write(A), write(' and '),write(B), write(' is '), S is A/B, write(S).
+roots(A,B):- S is round(A^B) , write(S).
+square(A):-  S is A^2, write(S).
+cube(A):- S is A^3, write(S).
+percent(A,B):- write('percent of '), write(A), write(' and '),write(B), write(' is '), S is (A/B)*100, write(S).
+log(A):-write('log of '), write(A), write(' is '), S is log(A) , write(S).
+isgreater(A,B):-A>B,write("A is larger").
+issmaller(A,B):-A<B,write("B is larger and A is smaller").
+isequal(A,B):-A==B,write("A and B are equal").
+notequal(A,B):-A\=B,write("A and B are not equal").
+cos(A):- write('Cos of '), write(A), write( is ),  Cos is cos(A), write(Cos).
+sin(A):- write('Sin of '), write(A), write( is ),  Sin is sin(A), write(Sin).
+tan(A):- write('Tan of '), write(A), write( is ),  Tan is tan(A), write(Tan).
+exp(A):- Exp is exp(A), write(Exp).
+fib(0,0).
+fib(1,1).
+fib(N,R):-
+    (
+       N>1,
+       A is N-1,B is N-2,
+       fib(A,T1),fib(B,T2),
+       R is T1+T2
+    ).
